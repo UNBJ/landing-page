@@ -1,4 +1,5 @@
 ---
+import photosData from '../data/photos.json';
 ---
 <!DOCTYPE html>
 <html lang="es">
@@ -179,6 +180,251 @@
         .hero__main { gap: 20px; }
         .hero__decor--arc { display: none; }
       }
+
+      /* ── Galería Sección ───────────────────────── */
+      .galeria {
+        padding: 88px 60px 80px;
+        background: var(--bg-cream);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 56px;
+        border-top: 1px solid rgba(28, 28, 28, 0.15);
+      }
+
+      .galeria__header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .galeria__eyebrow {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 2.5px;
+        color: var(--text-secondary);
+      }
+
+      .galeria__title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 64px;
+        line-height: 1.05;
+        font-weight: normal;
+        font-style: italic;
+        color: var(--text-dark);
+      }
+
+      .galeria__subtitle {
+        font-size: 14px;
+        color: var(--text-secondary);
+        max-width: 480px;
+        line-height: 1.5;
+      }
+
+      /* Tabs de Días */
+      .tabs {
+        display: inline-flex;
+        background: #FFFFFF;
+        border: 1px solid rgba(28, 28, 28, 0.15);
+        border-radius: 999px;
+        padding: 6px;
+        gap: 8px;
+      }
+
+      .tab-btn {
+        background: none;
+        border: none;
+        padding: 10px 24px;
+        font-family: 'Inter', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text-secondary);
+        border-radius: 999px;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .tab-btn:hover {
+        color: var(--text-dark);
+      }
+
+      .tab-btn.active {
+        background: var(--text-dark);
+        color: var(--bg-cream);
+      }
+
+      /* Contenedor de Collages */
+      .collages-container {
+        width: 100%;
+        max-width: 1200px;
+        min-height: 520px;
+      }
+
+      .collage-pane {
+        display: none;
+        grid-template-columns: 1fr 1.2fr 1fr;
+        gap: 24px;
+        animation: fadeInCollage 0.5s ease-out;
+      }
+
+      .collage-pane.active {
+        display: grid;
+      }
+
+      @keyframes fadeInCollage {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .collage-col {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .collage-img-wrapper {
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+        background: rgba(28, 28, 28, 0.05);
+        border: 1px solid rgba(28, 28, 28, 0.08);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+      }
+
+      .collage-img-wrapper:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 32px rgba(28, 28, 28, 0.12);
+      }
+
+      .collage-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.6s ease;
+      }
+
+      .collage-img-wrapper:hover .collage-img {
+        transform: scale(1.03);
+      }
+
+      /* Alturas de las imágenes para el collage asimétrico */
+      .h-vertical-top { height: 290px; }
+      .h-landscape-bottom { height: 186px; }
+      .h-hero { height: 500px; }
+      .h-landscape-top { height: 210px; }
+      .h-vertical-bottom { height: 266px; }
+
+      /* CTA */
+      .galeria__cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .cta-link-btn {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background: none;
+        border: 1px solid var(--text-dark);
+        color: var(--text-dark);
+        padding: 16px 36px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background 0.3s, color 0.3s;
+      }
+
+      .cta-link-btn:hover {
+        background: var(--text-dark);
+        color: var(--bg-cream);
+      }
+
+      .cta-link-btn svg {
+        transition: transform 0.3s ease;
+      }
+
+      .cta-link-btn:hover svg {
+        transform: translateX(4px);
+      }
+
+      .cta-counter {
+        font-size: 11px;
+        letter-spacing: 1px;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+
+      /* ── Tablet Galería ────────────────────────── */
+      @media (max-width: 1024px) {
+        .galeria {
+          padding: 64px 40px;
+          gap: 40px;
+        }
+        .galeria__title {
+          font-size: 48px;
+        }
+        .collage-pane.active {
+          grid-template-columns: 1fr 1fr;
+        }
+        .collage-col--side-right {
+          display: none; /* Ocultar la tercera columna en tablet */
+        }
+        .h-vertical-top { height: 260px; }
+        .h-landscape-bottom { height: 200px; }
+        .h-hero { height: 484px; }
+      }
+
+      /* ── Mobile Galería ────────────────────────── */
+      @media (max-width: 640px) {
+        .galeria {
+          padding: 48px 20px;
+          gap: 32px;
+        }
+        .galeria__title {
+          font-size: 36px;
+        }
+        .tabs {
+          padding: 4px;
+          gap: 4px;
+          width: 100%;
+          justify-content: space-between;
+        }
+        .tab-btn {
+          padding: 8px 12px;
+          font-size: 12px;
+          flex: 1;
+          text-align: center;
+        }
+        .collages-container {
+          min-height: auto;
+        }
+        .collage-pane.active {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+        .collage-col--side-left {
+          display: none; /* Ocultar primera columna en móvil */
+        }
+        .collage-col--hero {
+          width: 100%;
+        }
+        .h-hero {
+          height: 320px;
+        }
+        .cta-link-btn {
+          padding: 14px 24px;
+          font-size: 13px;
+          width: 100%;
+          justify-content: center;
+        }
+      }
     </style>
   </head>
   <body>
@@ -243,6 +489,180 @@
         </div>
 
       </section>
+
+      <!-- ── Sección Galería ── -->
+      <section class="galeria" id="galeria">
+        <div class="galeria__header">
+          <span class="galeria__eyebrow">GALERÍA</span>
+          <h2 class="galeria__title">Galería de Fotos</h2>
+          <p class="galeria__subtitle">Revive los momentos más significativos del congreso, día por día.</p>
+        </div>
+
+        <!-- Pestañas -->
+        <div class="tabs">
+          <button class="tab-btn active" data-day="lunes">Lunes</button>
+          <button class="tab-btn" data-day="martes">Martes</button>
+          <button class="tab-btn" data-day="miercoles">Miércoles</button>
+          <button class="tab-btn" data-day="jueves">Jueves</button>
+        </div>
+
+        <!-- Contenedor de Collages -->
+        <div class="collages-container">
+          {/* Lunes */}
+          <div class="collage-pane active" id="pane-lunes">
+            <div class="collage-col collage-col--side-left">
+              <div class="collage-img-wrapper h-vertical-top">
+                <img src={photosData.lunes[0]?.url} alt="Foto Lunes 1" class="collage-img" loading="lazy" />
+              </div>
+              <div class="collage-img-wrapper h-landscape-bottom">
+                <img src={photosData.lunes[3]?.url} alt="Foto Lunes 4" class="collage-img" loading="lazy" />
+              </div>
+            </div>
+            <div class="collage-col collage-col--hero">
+              <div class="collage-img-wrapper h-hero">
+                <img src={photosData.lunes[1]?.url} alt="Foto Lunes 2 (Hero)" class="collage-img" loading="lazy" />
+              </div>
+            </div>
+            <div class="collage-col collage-col--side-right">
+              <div class="collage-img-wrapper h-landscape-top">
+                <img src={photosData.lunes[2]?.url} alt="Foto Lunes 3" class="collage-img" loading="lazy" />
+              </div>
+              <div class="collage-img-wrapper h-vertical-bottom">
+                <img src={photosData.lunes[4]?.url} alt="Foto Lunes 5" class="collage-img" loading="lazy" />
+              </div>
+            </div>
+          </div>
+
+          {/* Martes */}
+          <div class="collage-pane" id="pane-martes">
+            <div class="collage-col collage-col--side-left">
+              <div class="collage-img-wrapper h-vertical-top">
+                <img src={photosData.martes[0]?.url} alt="Foto Martes 1" class="collage-img" loading="lazy" />
+              </div>
+              <div class="collage-img-wrapper h-landscape-bottom">
+                <img src={photosData.martes[3]?.url} alt="Foto Martes 4" class="collage-img" loading="lazy" />
+              </div>
+            </div>
+            <div class="collage-col collage-col--hero">
+              <div class="collage-img-wrapper h-hero">
+                <img src={photosData.martes[1]?.url} alt="Foto Martes 2 (Hero)" class="collage-img" loading="lazy" />
+              </div>
+            </div>
+            <div class="collage-col collage-col--side-right">
+              <div class="collage-img-wrapper h-landscape-top">
+                <img src={photosData.martes[2]?.url} alt="Foto Martes 3" class="collage-img" loading="lazy" />
+              </div>
+              <div class="collage-img-wrapper h-vertical-bottom">
+                <img src={photosData.martes[4]?.url} alt="Foto Martes 5" class="collage-img" loading="lazy" />
+              </div>
+            </div>
+          </div>
+
+          {/* Miércoles */}
+          <div class="collage-pane" id="pane-miercoles">
+            <div class="collage-col collage-col--side-left">
+              <div class="collage-img-wrapper h-vertical-top">
+                <img src={photosData.miercoles[0]?.url} alt="Foto Miércoles 1" class="collage-img" loading="lazy" />
+              </div>
+              <div class="collage-img-wrapper h-landscape-bottom">
+                <img src={photosData.miercoles[3]?.url} alt="Foto Miércoles 4" class="collage-img" loading="lazy" />
+              </div>
+            </div>
+            <div class="collage-col collage-col--hero">
+              <div class="collage-img-wrapper h-hero">
+                <img src={photosData.miercoles[1]?.url} alt="Foto Miércoles 2 (Hero)" class="collage-img" loading="lazy" />
+              </div>
+            </div>
+            <div class="collage-col collage-col--side-right">
+              <div class="collage-img-wrapper h-landscape-top">
+                <img src={photosData.miercoles[2]?.url} alt="Foto Miércoles 3" class="collage-img" loading="lazy" />
+              </div>
+              <div class="collage-img-wrapper h-vertical-bottom">
+                <img src={photosData.miercoles[4]?.url} alt="Foto Miércoles 5" class="collage-img" loading="lazy" />
+              </div>
+            </div>
+          </div>
+
+          {/* Jueves */}
+          <div class="collage-pane" id="pane-jueves">
+            <div class="collage-col collage-col--side-left">
+              <div class="collage-img-wrapper h-vertical-top">
+                <img src={photosData.jueves[0]?.url} alt="Foto Jueves 1" class="collage-img" loading="lazy" />
+              </div>
+              <div class="collage-img-wrapper h-landscape-bottom">
+                <img src={photosData.jueves[3]?.url} alt="Foto Jueves 4" class="collage-img" loading="lazy" />
+              </div>
+            </div>
+            <div class="collage-col collage-col--hero">
+              <div class="collage-img-wrapper h-hero">
+                <img src={photosData.jueves[1]?.url} alt="Foto Jueves 2 (Hero)" class="collage-img" loading="lazy" />
+              </div>
+            </div>
+            <div class="collage-col collage-col--side-right">
+              <div class="collage-img-wrapper h-landscape-top">
+                <img src={photosData.jueves[2]?.url} alt="Foto Jueves 3" class="collage-img" loading="lazy" />
+              </div>
+              <div class="collage-img-wrapper h-vertical-bottom">
+                <img src={photosData.jueves[4]?.url} alt="Foto Jueves 5" class="collage-img" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA dinámico -->
+        <div class="galeria__cta">
+          <a href="/fotos/lunes" class="cta-link-btn" id="gallery-cta-link">
+            <span id="gallery-cta-text">Ver todas las fotos del Lunes</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <span class="cta-counter" id="gallery-cta-counter">+{photosData.lunes.length} fotos</span>
+        </div>
+      </section>
     </main>
+
+    <!-- Client-side script to handle tab switching -->
+    <script is:inline define:vars={{ photosCount: {
+      lunes: photosData.lunes.length,
+      martes: photosData.martes.length,
+      miercoles: photosData.miercoles.length,
+      jueves: photosData.jueves.length
+    }}}>
+      document.addEventListener('DOMContentLoaded', () => {
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const collagePanes = document.querySelectorAll('.collage-pane');
+        const ctaLink = document.getElementById('gallery-cta-link');
+        const ctaText = document.getElementById('gallery-cta-text');
+        const ctaCounter = document.getElementById('gallery-cta-counter');
+
+        if (!ctaLink || !ctaText || !ctaCounter) return;
+
+        tabBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const day = btn.getAttribute('data-day');
+            if (!day) return;
+
+            // Activar botón
+            tabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Activar pane
+            collagePanes.forEach(pane => pane.classList.remove('active'));
+            const targetPane = document.getElementById(`pane-${day}`);
+            if (targetPane) {
+              targetPane.classList.add('active');
+            }
+
+            // Actualizar CTA
+            const formattedDay = day.charAt(0).toUpperCase() + day.slice(1);
+            ctaLink.setAttribute('href', `/fotos/${day}`);
+            ctaText.textContent = `Ver todas las fotos del ${formattedDay === 'Miercoles' ? 'Miércoles' : formattedDay}`;
+            ctaCounter.textContent = `+${photosCount[day]} fotos`;
+          });
+        });
+      });
+    </script>
   </body>
 </html>
