@@ -1,296 +1,694 @@
 {
   "lunes": [
     {
-      "id": "l1",
-      "url": "https://images.unsplash.com/photo-1515162305285-0293e4767cc2?q=80&w=1600",
+      "id": "lu_1",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/1.jpg",
+      "key": "lunes/1.jpg",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "l2",
-      "url": "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "l3",
-      "url": "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?q=80&w=1600",
-      "width": 1600,
-      "height": 1200
-    },
-    {
-      "id": "l4",
-      "url": "https://images.unsplash.com/photo-1510531704581-5b2870972060?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "l5",
-      "url": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "l6",
-      "url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600",
+      "id": "lu_2",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_0182.jpg",
+      "key": "lunes/IMG_0182.jpg",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "l7",
-      "url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "l8",
-      "url": "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=1600",
+      "id": "lu_3",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_01821.jpg",
+      "key": "lunes/IMG_01821.jpg",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "l9",
-      "url": "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "l10",
-      "url": "https://images.unsplash.com/photo-1469571486040-afb75914904a?q=80&w=1600",
+      "id": "lu_4",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_0381.jpg",
+      "key": "lunes/IMG_0381.jpg",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "l11",
-      "url": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
+      "id": "lu_5",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_03811.jpg",
+      "key": "lunes/IMG_03811.jpg",
+      "width": 1600,
+      "height": 1066
     },
     {
-      "id": "l12",
-      "url": "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=1600",
+      "id": "lu_6",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_0951.jpg",
+      "key": "lunes/IMG_0951.jpg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_7",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1293.jpg",
+      "key": "lunes/IMG_1293.jpg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_8",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_12931.jpg",
+      "key": "lunes/IMG_12931.jpg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_9",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1534.jpeg",
+      "key": "lunes/IMG_1534.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_10",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1540.jpg",
+      "key": "lunes/IMG_1540.jpg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_11",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_15401.jpg",
+      "key": "lunes/IMG_15401.jpg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_12",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1541.jpeg",
+      "key": "lunes/IMG_1541.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_13",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1552.jpeg",
+      "key": "lunes/IMG_1552.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_14",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1577.jpeg",
+      "key": "lunes/IMG_1577.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_15",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1580.jpg",
+      "key": "lunes/IMG_1580.jpg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_16",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_15801.jpg",
+      "key": "lunes/IMG_15801.jpg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_17",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1583.jpg",
+      "key": "lunes/IMG_1583.jpg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_18",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_15831.jpg",
+      "key": "lunes/IMG_15831.jpg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_19",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1585.jpg",
+      "key": "lunes/IMG_1585.jpg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_20",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_15851.jpg",
+      "key": "lunes/IMG_15851.jpg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_21",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1589.jpg",
+      "key": "lunes/IMG_1589.jpg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_22",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_15891.jpg",
+      "key": "lunes/IMG_15891.jpg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_23",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1651.jpeg",
+      "key": "lunes/IMG_1651.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_24",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1658.jpeg",
+      "key": "lunes/IMG_1658.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_25",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1659.jpeg",
+      "key": "lunes/IMG_1659.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_26",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1660.jpeg",
+      "key": "lunes/IMG_1660.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_27",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1661.jpeg",
+      "key": "lunes/IMG_1661.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_28",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1693.jpeg",
+      "key": "lunes/IMG_1693.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_29",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1710.jpeg",
+      "key": "lunes/IMG_1710.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_30",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1712.jpg",
+      "key": "lunes/IMG_1712.jpg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_31",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_17121.jpg",
+      "key": "lunes/IMG_17121.jpg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_32",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/IMG_1731.jpeg",
+      "key": "lunes/IMG_1731.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_33",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/zerocam_2 - Copy.jpg",
+      "key": "lunes/zerocam_2 - Copy.jpg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_34",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/zerocam_2 - Copy1.jpg",
+      "key": "lunes/zerocam_2 - Copy1.jpg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "lu_35",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/lunes/zerocam_2.jpeg",
+      "key": "lunes/zerocam_2.jpeg",
       "width": 1600,
       "height": 1066
     }
   ],
   "martes": [
     {
-      "id": "m1",
-      "url": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=1600",
+      "id": "ma_1",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/martes/C856E00E-A4BA-4326-AE8F-D61D6C5872B1.jpeg",
+      "key": "martes/C856E00E-A4BA-4326-AE8F-D61D6C5872B1.jpeg",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "m2",
-      "url": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "m3",
-      "url": "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=1600",
+      "id": "ma_2",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/martes/IMG_0166.png",
+      "key": "martes/IMG_0166.png",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "m4",
-      "url": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "m5",
-      "url": "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "m6",
-      "url": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1600",
+      "id": "ma_3",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/martes/IMG_0343.jpeg",
+      "key": "martes/IMG_0343.jpeg",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "m7",
-      "url": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "m8",
-      "url": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=1600",
+      "id": "ma_4",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/martes/IMG_1313.jpeg",
+      "key": "martes/IMG_1313.jpeg",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "m9",
-      "url": "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "m10",
-      "url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1600",
+      "id": "ma_5",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/martes/IMG_1567.jpeg",
+      "key": "martes/IMG_1567.jpeg",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "m11",
-      "url": "https://images.unsplash.com/photo-1515263487990-61b07816b324?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
+      "id": "ma_6",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/martes/IMG_3392.jpeg",
+      "key": "martes/IMG_3392.jpeg",
+      "width": 1600,
+      "height": 1066
     },
     {
-      "id": "m12",
-      "url": "https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=1600",
+      "id": "ma_7",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/martes/IMG_5854.jpeg",
+      "key": "martes/IMG_5854.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ma_8",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/martes/IMG_6981.jpeg",
+      "key": "martes/IMG_6981.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ma_9",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/martes/IMG_6982.jpeg",
+      "key": "martes/IMG_6982.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ma_10",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/martes/IMG_7315.jpeg",
+      "key": "martes/IMG_7315.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ma_11",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/martes/IMG_7373.jpeg",
+      "key": "martes/IMG_7373.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ma_12",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/martes/IMG_7662.jpeg",
+      "key": "martes/IMG_7662.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ma_13",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/martes/IMG_8389.png",
+      "key": "martes/IMG_8389.png",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ma_14",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/martes/IMG_9014.jpeg",
+      "key": "martes/IMG_9014.jpeg",
       "width": 1600,
       "height": 1066
     }
   ],
   "miercoles": [
     {
-      "id": "mi1",
-      "url": "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1600",
+      "id": "mi_1",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/IMG_1254.jpeg",
+      "key": "miercoles/IMG_1254.jpeg",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "mi2",
-      "url": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "mi3",
-      "url": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1600",
+      "id": "mi_2",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/IMG_1294.jpeg",
+      "key": "miercoles/IMG_1294.jpeg",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "mi4",
-      "url": "https://images.unsplash.com/photo-1510531704581-5b2870972060?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "mi5",
-      "url": "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "mi6",
-      "url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600",
+      "id": "mi_3",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/IMG_1295.jpeg",
+      "key": "miercoles/IMG_1295.jpeg",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "mi7",
-      "url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "mi8",
-      "url": "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=1600",
+      "id": "mi_4",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/IMG_1297.jpeg",
+      "key": "miercoles/IMG_1297.jpeg",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "mi9",
-      "url": "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "mi10",
-      "url": "https://images.unsplash.com/photo-1469571486040-afb75914904a?q=80&w=1600",
+      "id": "mi_5",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/IMG_1299.jpeg",
+      "key": "miercoles/IMG_1299.jpeg",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "mi11",
-      "url": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
+      "id": "mi_6",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/IMG_1328.jpeg",
+      "key": "miercoles/IMG_1328.jpeg",
+      "width": 1600,
+      "height": 1066
     },
     {
-      "id": "mi12",
-      "url": "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=1600",
+      "id": "mi_7",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/IMG_1344.jpeg",
+      "key": "miercoles/IMG_1344.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "mi_8",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/IMG_1387.jpeg",
+      "key": "miercoles/IMG_1387.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "mi_9",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/IMG_1488.jpeg",
+      "key": "miercoles/IMG_1488.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "mi_10",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/IMG_1495.jpeg",
+      "key": "miercoles/IMG_1495.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "mi_11",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/IMG_1502.jpeg",
+      "key": "miercoles/IMG_1502.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "mi_12",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/IMG_1522.jpeg",
+      "key": "miercoles/IMG_1522.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "mi_13",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/IMG_1541.jpeg",
+      "key": "miercoles/IMG_1541.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "mi_14",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/IMG_1552.jpeg",
+      "key": "miercoles/IMG_1552.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "mi_15",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/IMG_1580.jpeg",
+      "key": "miercoles/IMG_1580.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "mi_16",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/IMG_1581.jpeg",
+      "key": "miercoles/IMG_1581.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "mi_17",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/IMG_1585.jpeg",
+      "key": "miercoles/IMG_1585.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "mi_18",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/zerocam_0.jpeg",
+      "key": "miercoles/zerocam_0.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "mi_19",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/miercoles/zerocam_2.jpeg",
+      "key": "miercoles/zerocam_2.jpeg",
       "width": 1600,
       "height": 1066
     }
   ],
   "jueves": [
     {
-      "id": "j1",
-      "url": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1600",
+      "id": "ju_1",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0136.jpeg",
+      "key": "jueves/IMG_0136.jpeg",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "j2",
-      "url": "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "j3",
-      "url": "https://images.unsplash.com/photo-1469571486040-afb75914904a?q=80&w=1600",
+      "id": "ju_2",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0158.jpeg",
+      "key": "jueves/IMG_0158.jpeg",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "j4",
-      "url": "https://images.unsplash.com/photo-1510531704581-5b2870972060?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "j5",
-      "url": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "j6",
-      "url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600",
+      "id": "ju_3",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0165.jpeg",
+      "key": "jueves/IMG_0165.jpeg",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "j7",
-      "url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "j8",
-      "url": "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=1600",
+      "id": "ju_4",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0179.jpeg",
+      "key": "jueves/IMG_0179.jpeg",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "j9",
-      "url": "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
-    },
-    {
-      "id": "j10",
-      "url": "https://images.unsplash.com/photo-1469571486040-afb75914904a?q=80&w=1600",
+      "id": "ju_5",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0188.jpeg",
+      "key": "jueves/IMG_0188.jpeg",
       "width": 1600,
       "height": 1066
     },
     {
-      "id": "j11",
-      "url": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1000&h=1500&fit=crop",
-      "width": 1000,
-      "height": 1500
+      "id": "ju_6",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0316.jpeg",
+      "key": "jueves/IMG_0316.jpeg",
+      "width": 1600,
+      "height": 1066
     },
     {
-      "id": "j12",
-      "url": "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=1600",
+      "id": "ju_7",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0330.jpeg",
+      "key": "jueves/IMG_0330.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_8",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0377.jpeg",
+      "key": "jueves/IMG_0377.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_9",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0391.jpeg",
+      "key": "jueves/IMG_0391.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_10",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0398.jpeg",
+      "key": "jueves/IMG_0398.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_11",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0413.jpeg",
+      "key": "jueves/IMG_0413.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_12",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0418.jpeg",
+      "key": "jueves/IMG_0418.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_13",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0482.jpeg",
+      "key": "jueves/IMG_0482.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_14",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0498.jpeg",
+      "key": "jueves/IMG_0498.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_15",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0652.jpeg",
+      "key": "jueves/IMG_0652.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_16",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0667.jpeg",
+      "key": "jueves/IMG_0667.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_17",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0678.jpeg",
+      "key": "jueves/IMG_0678.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_18",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0698.jpeg",
+      "key": "jueves/IMG_0698.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_19",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0711.jpeg",
+      "key": "jueves/IMG_0711.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_20",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0926.jpeg",
+      "key": "jueves/IMG_0926.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_21",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0944.jpeg",
+      "key": "jueves/IMG_0944.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_22",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0945.jpeg",
+      "key": "jueves/IMG_0945.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_23",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0947.jpeg",
+      "key": "jueves/IMG_0947.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_24",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0948.jpeg",
+      "key": "jueves/IMG_0948.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_25",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0949.jpeg",
+      "key": "jueves/IMG_0949.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_26",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_0953.jpeg",
+      "key": "jueves/IMG_0953.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_27",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_1088.jpeg",
+      "key": "jueves/IMG_1088.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_28",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_1189.jpeg",
+      "key": "jueves/IMG_1189.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_29",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_1290.jpeg",
+      "key": "jueves/IMG_1290.jpeg",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "id": "ju_30",
+      "url": "https://pub-52e33ca2d40c45a89ac41912f69e7bdb.r2.dev/jueves/IMG_1291.jpeg",
+      "key": "jueves/IMG_1291.jpeg",
       "width": 1600,
       "height": 1066
     }
