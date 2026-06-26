@@ -1,5 +1,7 @@
 # build output
 dist/
+dist.zip
+
 # generated types
 .astro/
 
@@ -12,13 +14,26 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-
-# environment variables
+# environment variables (containing secrets)
 .env
+.env.local
 .env.production
+.env.development
+.env.test
+.env.development.local
+.env.production.local
+.env.test.local
+.env.local
 
-# macOS-specific files
+# Vercel & Netlify configuration / cache
+.vercel/
+.netlify/
+
+# macOS / Windows specific OS files
 .DS_Store
+.localized
+Thumbs.db
 
-# jetbrains setting folder
+# IDE setting folders
 .idea/
+.vscode/
