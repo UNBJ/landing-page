@@ -23,4 +23,5 @@ Cada subdominio tiene directorio aislado — no afecta los demás sitios del hos
 - [ ] Diseño de la landing page (pendiente — usar Pencil MCP)
 - [ ] Contenido/branding de UNBJ por definir
 - [ ] Implementación de Galería de Fotos (Lunes a Jueves) con Cloudflare R2 y React (ver [.agents/AGENTS.md](file:///Users/raulcanul/Documents/Dev/unbj-page/.agents/AGENTS.md))
+- [x] Sección Calendario de Actividades (antes de galería) — datos en `src/data/schedule.json`, los 4 días con programa completo
 
