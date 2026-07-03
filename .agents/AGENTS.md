@@ -57,6 +57,36 @@ Todo el flujo de la galería de fotos ha sido implementado con éxito:
   ```
   Esto generará la carpeta `dist/` y actualizará automáticamente el paquete `dist.zip` en la raíz.
 * **Caché en Desarrollo**: Astro/Vite cachean los datos importados de JSON estáticos al inicio. Si ejecutas `npm run sync-photos` con el servidor dev encendido, debes reiniciar el servidor (`npm run dev`) para ver los cambios reflejados.
+* **Despliegues de Prueba (Vercel)**:
+  * Para crear entornos de prueba/preview sin alterar producción en Hostinger, se puede usar Vercel.
+  * Despliegue rápido por CLI: ejecuta `npx vercel` y sigue las instrucciones de la terminal.
+  * Despliegue continuo: conecta el repositorio de GitHub al dashboard de Vercel.
+  * **IMPORTANTE**: En la configuración del proyecto en la web de Vercel, se deben agregar las variables de entorno de Cloudflare R2 (`R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_ENDPOINT`, `R2_BUCKET_NAME`, `R2_PUBLIC_URL`) para que el servidor de Vercel pueda listar y compilar las fotos reales durante el despliegue.
+* **Seguridad en Git (.gitignore)**:
+  * El archivo `.gitignore` ha sido configurado para excluir archivos temporales de compilación, credenciales secretas de variables de entorno (todas las variantes de `.env`), las carpetas de caché de despliegue (`.vercel/`, `.netlify/`) y los paquetes ZIP compilados (`dist.zip`).
+
+---
+
+## 🎨 Actualización de Diseño de Subpáginas (27-Jun-2026)
+
+Se actualizó el diseño visual de `src/pages/fotos/[dia].astro` y `src/components/GalleryGrid.tsx` para alinearlos con los 3 frames de Pencil (`gallery.pen`): Desktop (1440px), Tablet (820px) y Mobile (390px).
+
+### Cambios en `[dia].astro`
+- **Eyebrow**: cambiado de "Galería de Fotos" → `"GALERÍA"` (uppercase, letter-spacing: 2px).
+- **Título**: tamaño aumentado a 72px (desktop) → 56px (≤1024px) → 42px (≤640px), lineHeight 1.05 en mobile.
+- **Subtítulo**: formato `{date} · Congreso UNBJ 2026`.
+- **Contador de fotos**: visible como texto alineado a la derecha del título en desktop/tablet; en mobile se reemplaza por un bloque con ícono de imágenes + cantidad.
+- **Header**: texto "Volver a la página principal" (desktop) / "Volver" (mobile); wordmark `"U N B J"` con letter-spacing: 3px en Inter.
+- **Padding del grid**: 64px top en desktop; 0px en tablet/mobile (el `<main class="grid-section">` lo maneja).
+
+### Cambios en `GalleryGrid.tsx`
+- **Estructura del grid**: migrado de CSS `column-count` (masonry browser-driven) a **columnas flex explícitas con distribución round-robin** en React, igual que el diseño de Pencil.
+  - Se detecta el viewport con `useEffect` + `resize listener`.
+  - Columnas: 4 (≥1280px) · 3 (≥820px) · 2 (<820px).
+  - Distribución: foto 0 → col 0, foto 1 → col 1, foto 2 → col 2 … (round-robin).
+- **Gaps**: 16px (desktop) · 12px (tablet) · 8px (mobile), aplicados vía inline style en el contenedor y las columnas.
+- **Botón "Cargar más"**: renombrado a `"CARGAR MÁS FOTOS"` (uppercase, letter-spacing: 2px, sin ícono, outline 1px). Full-width en mobile.
+- **Texto de paginación**: `"Mostrando X de Y fotos"` siempre visible debajo del botón.
 
 ---
 

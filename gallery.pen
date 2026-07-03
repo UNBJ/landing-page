@@ -1576,7 +1576,8 @@
                   "fill": "$text-dark",
                   "content": "Martes",
                   "fontFamily": "$font-sans",
-                  "fontSize": 12
+                  "fontSize": 12,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -1600,7 +1601,8 @@
                   "fill": "$text-dark",
                   "content": "Miércoles",
                   "fontFamily": "$font-sans",
-                  "fontSize": 12
+                  "fontSize": 12,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -1624,7 +1626,8 @@
                   "fill": "$text-dark",
                   "content": "Jueves",
                   "fontFamily": "$font-sans",
-                  "fontSize": 12
+                  "fontSize": 12,
+                  "fontWeight": "normal"
                 }
               ]
             }
