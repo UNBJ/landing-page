@@ -1,0 +1,36 @@
+{
+  "version": "2.14",
+  "children": [
+    {
+      "type": "rectangle",
+      "id": "g5Gzn4",
+      "x": 0,
+      "y": 0,
+      "name": "rojo",
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "images/Mesa%20de%20trabajo%2025%20azul.jpeg",
+        "mode": "fill"
+      },
+      "width": 2000,
+      "height": 2500
+    },
+    {
+      "type": "rectangle",
+      "id": "JttzQ",
+      "x": 2203,
+      "y": 0,
+      "name": "azul",
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "images/Mesa%20de%20trabajo%2023.jpeg",
+        "mode": "fill"
+      },
+      "width": 2000,
+      "height": 2500
+    }
+  ],
+  "fileToken": "9326452c-64e1-481d-899d-b8ecce3f3b92"
+}

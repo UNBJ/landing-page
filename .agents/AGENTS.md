@@ -90,6 +90,31 @@ Se actualizó el diseño visual de `src/pages/fotos/[dia].astro` y `src/componen
 
 ---
 
+## 📅 Sección Calendario de Actividades (03-Jul-2026)
+
+Se implementó la sección **"Calendario de Actividades"** en `src/pages/index.astro`, ubicada entre el hero y la galería, a partir de los 3 frames de Pencil (`unbj-landing.pen`): "Calendario Alt — Desktop" (1440px), "Tablet" (834px) y "Mobile" (390px).
+
+### Estructura y datos
+- **Datos**: `src/data/schedule.json` con los 4 días completos (Lunes 7 eventos, Martes 17, Miércoles 17, Jueves 15). Cada evento tiene `horario` (formato `"H:MM — H:MM"` con raya larga), `actividad`, `duracion` y `tipo`:
+  - `normal`: fila estándar.
+  - `destacado`: hora y actividad en rojo (usado en todos los "Acceso a las puertas").
+  - `principal`: borde izquierdo rojo, tag "EVENTO PRINCIPAL" y título grande en Playfair (Cultos Magnos de Lunes/Martes/Miércoles y "Noche de adoración — Cierre" del Jueves).
+- **Layouts**: Desktop = rail izquierdo de 380px (encabezado + selector vertical de días con hairlines + nota) y timeline a la derecha (columna de horas de 140px). Tablet (≤1024px) = apilado con selector horizontal. Mobile (≤640px) = cada evento es una tarjeta con borde izquierdo; hora y duración corta en una fila.
+- **Interactividad**: mismo patrón que la galería — script inline (sin React) que cambia panes, caption "PROGRAMA · DÍA 0X", etiqueta del día y conteo de actividades, con ARIA de tabs.
+- **Fuentes**: el link de Google Fonts se amplió a Inter 400/500/600 y Playfair Display 400/700 (antes solo Inter 500 y Playfair itálica).
+- **Subtítulo de la sección**: `"CONAJEBA 2026 Como el Alba — Satélite, CDMX."`
+
+### Marcador "EN CURSO" en tiempo real
+Durante el congreso, la actividad que está ocurriendo se marca en vivo:
+- **Fechas del congreso**: mapa `congresoFechas` en `index.astro` → `2026-07-27` (lunes) a `2026-07-30` (jueves). Si cambian las fechas, solo se edita ese mapa.
+- **Reloj**: siempre hora de CDMX (`America/Mexico_City` vía `Intl.DateTimeFormat`), sin importar la zona del visitante.
+- **Lógica**: cada evento se genera con `data-inicio`/`data-fin` en minutos (parseados del `horario` en build). Si la hora actual cae en el rango, el evento recibe la clase `cal-evento--vivo`; los traslapes se marcan en paralelo. Un timer re-evalúa cada 60s.
+- **Visual**: borde izquierdo rojo + badge "● EN CURSO" con punto pulsante, tipografía normal. Si coincide con el evento principal, el tag muestra "EVENTO PRINCIPAL · ● EN CURSO" conservando el diseño principal. Sin actividad en curso no se marca nada.
+- **Al cargar**: en día de congreso la sección abre automáticamente en el día actual; fuera de fechas abre en Lunes.
+- **Cómo probarlo antes del congreso**: agregar temporalmente la fecha de hoy al mapa, p. ej. `'2026-07-04': 'martes'`, correr `npm run dev` y verificar; **quitar la línea antes de hacer deploy** (la prueba del 03-Jul ya fue revertida).
+
+---
+
 > [!NOTE]
 > Para detalles de diseño iniciales y diagramas estructurales, consulta:
 > [gallery_design_plan.md](file:///Users/raulcanul/Documents/Dev/unbj-page/gallery_design_plan.md) y la guía de setup **[r2_setup_guide.md](file:///Users/raulcanul/.gemini/antigravity-cli/brain/908e3851-800c-4e9f-8213-9cf93319abf9/r2_setup_guide.md)**.
