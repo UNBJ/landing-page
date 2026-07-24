@@ -873,7 +873,6 @@ const rangoMinutos = (horario: string) => {
         width: 100%;
         height: auto;
         display: block;
-        mix-blend-mode: multiply;
       }
 
       .croquis__map-action {
@@ -950,15 +949,17 @@ const rangoMinutos = (horario: string) => {
         overflow: auto;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         padding: 18px;
       }
 
       .croquis-lightbox__img {
-        width: min(94vw, 980px);
+        width: auto;
+        max-width: 100%;
+        max-height: 100%;
         height: auto;
         display: block;
-        background: #F3F1EC;
+        object-fit: contain;
       }
 
       /* ── Tablet Croquis ────────────────────────── */
@@ -1047,16 +1048,13 @@ const rangoMinutos = (horario: string) => {
 
         .croquis__map {
           align-items: stretch;
-          overflow-x: auto;
           padding-bottom: 6px;
-          -webkit-overflow-scrolling: touch;
         }
 
         .croquis__map-trigger {
-          width: 520px;
-          max-width: none;
-          flex: 0 0 auto;
-          align-self: flex-start;
+          width: 100%;
+          max-width: 420px;
+          align-self: center;
         }
 
         .croquis__map-action {
@@ -1080,13 +1078,15 @@ const rangoMinutos = (horario: string) => {
         }
 
         .croquis-lightbox__viewport {
-          justify-content: flex-start;
+          justify-content: center;
+          align-items: center;
           padding: 10px 0;
         }
 
         .croquis-lightbox__img {
-          width: 760px;
-          max-width: none;
+          width: auto;
+          max-width: 100%;
+          max-height: 100%;
         }
       }
 
@@ -1529,7 +1529,7 @@ const rangoMinutos = (horario: string) => {
 
           <div class="croquis__map">
             <button class="croquis__map-trigger" type="button" aria-label="Ampliar croquis del campus" data-croquis-open>
-              <img src="/croquis-campus.svg" alt="Croquis del campus Satélite Zona Esmeralda" class="croquis__map-img" loading="lazy" />
+              <img src="/croquis-campus.png" alt="Croquis del campus Satélite Zona Esmeralda" class="croquis__map-img" loading="lazy" />
             </button>
             <button class="croquis__map-action" type="button" data-croquis-open>
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1546,7 +1546,7 @@ const rangoMinutos = (horario: string) => {
 
       <div class="croquis-lightbox" id="croquis-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Croquis del campus ampliado">
         <div class="croquis-lightbox__topbar">
-          <a class="croquis-lightbox__link" href="/croquis-campus.svg" download>
+          <a class="croquis-lightbox__link" href="/croquis-campus.png" download>
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
               <path d="M7 10l5 5 5-5"></path>
@@ -1563,7 +1563,7 @@ const rangoMinutos = (horario: string) => {
           </button>
         </div>
         <div class="croquis-lightbox__viewport">
-          <img src="/croquis-campus.svg" alt="Croquis del campus Satélite Zona Esmeralda ampliado" class="croquis-lightbox__img" />
+          <img src="/croquis-campus.png" alt="Croquis del campus Satélite Zona Esmeralda ampliado" class="croquis-lightbox__img" />
         </div>
       </div>
 
