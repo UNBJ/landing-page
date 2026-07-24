@@ -647,16 +647,113 @@ const rangoMinutos = (horario: string) => {
 
       .croquis__map {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
         justify-content: center;
         width: 100%;
       }
 
-      .croquis__map-img {
+      .croquis__map-trigger {
+        display: block;
         width: 580px;
         max-width: 100%;
+        padding: 0;
+        border: none;
+        background: transparent;
+        cursor: zoom-in;
+      }
+
+      .croquis__map-img {
+        width: 100%;
         height: auto;
         display: block;
         mix-blend-mode: multiply;
+      }
+
+      .croquis__map-action {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 18px;
+        border: 1px solid rgba(28, 28, 28, 0.28);
+        border-radius: 4px;
+        background: transparent;
+        color: var(--text-dark);
+        font-family: 'Inter', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.25s, color 0.25s, border-color 0.25s;
+      }
+
+      .croquis__map-action:hover {
+        background: var(--text-dark);
+        border-color: var(--text-dark);
+        color: var(--bg-cream);
+      }
+
+      .croquis-lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 1200;
+        display: none;
+        background: rgba(28, 28, 28, 0.94);
+        padding: 28px;
+      }
+
+      .croquis-lightbox.is-open {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .croquis-lightbox__topbar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 12px;
+        flex-shrink: 0;
+      }
+
+      .croquis-lightbox__link,
+      .croquis-lightbox__close {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid rgba(232, 230, 223, 0.32);
+        border-radius: 4px;
+        background: transparent;
+        color: var(--text-light);
+        font-family: 'Inter', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 11px 16px;
+        cursor: pointer;
+      }
+
+      .croquis-lightbox__link:hover,
+      .croquis-lightbox__close:hover {
+        background: var(--text-light);
+        color: var(--text-dark);
+      }
+
+      .croquis-lightbox__viewport {
+        flex: 1;
+        min-height: 0;
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 18px;
+      }
+
+      .croquis-lightbox__img {
+        width: min(94vw, 980px);
+        height: auto;
+        display: block;
+        background: #F3F1EC;
       }
 
       /* ── Tablet Croquis ────────────────────────── */
@@ -691,7 +788,7 @@ const rangoMinutos = (horario: string) => {
           gap: 16px;
         }
 
-        .croquis__map-img {
+        .croquis__map-trigger {
           width: 520px;
         }
 
@@ -743,8 +840,48 @@ const rangoMinutos = (horario: string) => {
         .croquis__info--desktop { display: none; }
         .croquis__info--mobile { display: block; }
 
-        .croquis__map-img {
+        .croquis__map {
+          align-items: stretch;
+          overflow-x: auto;
+          padding-bottom: 6px;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .croquis__map-trigger {
+          width: 520px;
+          max-width: none;
+          flex: 0 0 auto;
+          align-self: flex-start;
+        }
+
+        .croquis__map-action {
+          align-self: center;
           width: 100%;
+          justify-content: center;
+        }
+
+        .croquis-lightbox {
+          padding: 14px;
+        }
+
+        .croquis-lightbox__topbar {
+          justify-content: space-between;
+        }
+
+        .croquis-lightbox__link,
+        .croquis-lightbox__close {
+          padding: 10px 12px;
+          font-size: 12px;
+        }
+
+        .croquis-lightbox__viewport {
+          justify-content: flex-start;
+          padding: 10px 0;
+        }
+
+        .croquis-lightbox__img {
+          width: 760px;
+          max-width: none;
         }
       }
 
@@ -1139,7 +1276,7 @@ const rangoMinutos = (horario: string) => {
             <header class="croquis__header">
               <span class="croquis__caption">UBICACIÓN · CAMPUS</span>
               <h2 class="croquis__title" id="croquis-title">Croquis del Campus</h2>
-              <p class="croquis__subtitle">Satélite Zona Esmeralda, Naucalpan de Juárez, Estado de México.</p>
+              <p class="croquis__subtitle">PIB Satélite Zona Esmeralda, Naucalpan de Juárez, Estado de México.</p>
             </header>
 
             <div class="croquis__details">
@@ -1153,10 +1290,44 @@ const rangoMinutos = (horario: string) => {
           </div>
 
           <div class="croquis__map">
-            <img src="/croquis-campus.svg" alt="Croquis del campus Satélite Zona Esmeralda" class="croquis__map-img" loading="lazy" />
+            <button class="croquis__map-trigger" type="button" aria-label="Ampliar croquis del campus" data-croquis-open>
+              <img src="/croquis-campus.svg" alt="Croquis del campus Satélite Zona Esmeralda" class="croquis__map-img" loading="lazy" />
+            </button>
+            <button class="croquis__map-action" type="button" data-croquis-open>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+                <path d="M11 8v6"></path>
+                <path d="M8 11h6"></path>
+              </svg>
+              <span>Ampliar croquis</span>
+            </button>
           </div>
         </div>
       </section>
+
+      <div class="croquis-lightbox" id="croquis-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Croquis del campus ampliado">
+        <div class="croquis-lightbox__topbar">
+          <a class="croquis-lightbox__link" href="/croquis-campus.svg" download>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <path d="M7 10l5 5 5-5"></path>
+              <path d="M12 15V3"></path>
+            </svg>
+            <span>Descargar</span>
+          </a>
+          <button class="croquis-lightbox__close" type="button" data-croquis-close>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+            <span>Cerrar</span>
+          </button>
+        </div>
+        <div class="croquis-lightbox__viewport">
+          <img src="/croquis-campus.svg" alt="Croquis del campus Satélite Zona Esmeralda ampliado" class="croquis-lightbox__img" />
+        </div>
+      </div>
 
       <!-- ── Sección Galería ── -->
       <section class="galeria" id="galeria">
@@ -1410,6 +1581,43 @@ const rangoMinutos = (horario: string) => {
 
         aplicarEnVivo();
         setInterval(aplicarEnVivo, 60000);
+      });
+    </script>
+
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        const lightbox = document.getElementById('croquis-lightbox');
+        const openBtns = document.querySelectorAll('[data-croquis-open]');
+        const closeBtn = document.querySelector('[data-croquis-close]');
+        if (!lightbox || openBtns.length === 0 || !closeBtn) return;
+
+        let previousOverflow = '';
+
+        const openLightbox = () => {
+          previousOverflow = document.body.style.overflow;
+          document.body.style.overflow = 'hidden';
+          lightbox.classList.add('is-open');
+          lightbox.setAttribute('aria-hidden', 'false');
+          closeBtn.focus();
+        };
+
+        const closeLightbox = () => {
+          document.body.style.overflow = previousOverflow;
+          lightbox.classList.remove('is-open');
+          lightbox.setAttribute('aria-hidden', 'true');
+        };
+
+        openBtns.forEach(btn => btn.addEventListener('click', openLightbox));
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (event) => {
+          if (event.target === lightbox) closeLightbox();
+        });
+
+        window.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+            closeLightbox();
+          }
+        });
       });
     </script>
   </body>
