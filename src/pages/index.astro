@@ -569,6 +569,185 @@ const rangoMinutos = (horario: string) => {
         .cal-vacio { padding: 32px 0; font-size: 14px; }
       }
 
+      /* ── Croquis Sección ───────────────────────── */
+      .croquis {
+        background: var(--bg-cream);
+        border-top: 1px solid rgba(28, 28, 28, 0.15);
+        padding: 100px 120px 80px;
+      }
+
+      .croquis__inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 380px 1fr;
+        gap: 80px;
+        align-items: start;
+      }
+
+      .croquis__rail {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+      }
+
+      .croquis__header {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .croquis__caption {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        color: var(--accent-red);
+      }
+
+      .croquis__title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 58px;
+        font-weight: 700;
+        line-height: 1.08;
+        color: var(--text-dark);
+      }
+
+      .croquis__subtitle {
+        font-size: 15px;
+        line-height: 1.55;
+        color: var(--text-secondary);
+      }
+
+      .croquis__details {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .croquis__hairline {
+        width: 100%;
+        height: 1px;
+        background: rgba(28, 28, 28, 0.12);
+      }
+
+      .croquis__info {
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--text-secondary);
+      }
+
+      .croquis__info--mobile { display: none; }
+
+      .croquis__note {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-style: italic;
+        font-size: 14px;
+        color: var(--text-secondary);
+      }
+
+      .croquis__map {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .croquis__map-img {
+        width: 580px;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        mix-blend-mode: multiply;
+      }
+
+      /* ── Tablet Croquis ────────────────────────── */
+      @media (max-width: 1024px) {
+        .croquis {
+          padding: 84px 64px 72px;
+        }
+
+        .croquis__inner {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .croquis__rail {
+          gap: 40px;
+        }
+
+        .croquis__header {
+          gap: 16px;
+        }
+
+        .croquis__title {
+          font-size: 44px;
+          line-height: 1.1;
+        }
+
+        .croquis__subtitle {
+          line-height: 1.5;
+        }
+
+        .croquis__details {
+          gap: 16px;
+        }
+
+        .croquis__map-img {
+          width: 520px;
+        }
+
+        .croquis__note {
+          font-size: 13px;
+        }
+      }
+
+      /* ── Mobile Croquis ────────────────────────── */
+      @media (max-width: 640px) {
+        .croquis {
+          padding: 64px 24px 56px;
+        }
+
+        .croquis__inner {
+          gap: 28px;
+        }
+
+        .croquis__rail {
+          gap: 28px;
+        }
+
+        .croquis__header {
+          gap: 12px;
+        }
+
+        .croquis__caption {
+          font-size: 11px;
+        }
+
+        .croquis__title {
+          font-size: 32px;
+          line-height: 1.12;
+        }
+
+        .croquis__subtitle {
+          font-size: 14px;
+        }
+
+        .croquis__details {
+          gap: 12px;
+        }
+
+        .croquis__info {
+          font-size: 13px;
+          line-height: 1.5;
+        }
+
+        .croquis__info--desktop { display: none; }
+        .croquis__info--mobile { display: block; }
+
+        .croquis__map-img {
+          width: 100%;
+        }
+      }
+
       /* ── Galería Sección ───────────────────────── */
       .galeria {
         padding: 88px 60px 80px;
@@ -950,6 +1129,32 @@ const rangoMinutos = (horario: string) => {
           </div>
 
           <p class="cal-nota">El programa puede ajustarse durante el congreso.</p>
+        </div>
+      </section>
+
+      <!-- ── Sección Croquis ── -->
+      <section class="croquis" id="croquis" aria-labelledby="croquis-title">
+        <div class="croquis__inner">
+          <div class="croquis__rail">
+            <header class="croquis__header">
+              <span class="croquis__caption">UBICACIÓN · CAMPUS</span>
+              <h2 class="croquis__title" id="croquis-title">Croquis del Campus</h2>
+              <p class="croquis__subtitle">Satélite Zona Esmeralda, Naucalpan de Juárez, Estado de México.</p>
+            </header>
+
+            <div class="croquis__details">
+              <span class="croquis__hairline" aria-hidden="true"></span>
+              <p class="croquis__info croquis__info--desktop">El campus cuenta con salones de conferencia, cafetería, canchas deportivas, áreas verdes y estacionamiento.</p>
+              <p class="croquis__info croquis__info--mobile">El campus cuenta con salones, cafetería, canchas y áreas verdes.</p>
+              <span class="croquis__hairline" aria-hidden="true"></span>
+            </div>
+
+            <p class="croquis__note">El croquis es una referencia visual. Las áreas pueden variar.</p>
+          </div>
+
+          <div class="croquis__map">
+            <img src="/croquis-campus.svg" alt="Croquis del campus Satélite Zona Esmeralda" class="croquis__map-img" loading="lazy" />
+          </div>
         </div>
       </section>
 
