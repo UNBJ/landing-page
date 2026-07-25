@@ -1,5 +1,13 @@
 # Bitacora del Proyecto
 
+## 2026-07-25 - Galeria sin Placeholders
+
+- Se eliminaron las fotos placeholder de Unsplash cuando Cloudflare R2 no tiene imagenes disponibles o falla la sincronizacion.
+- Causa del problema: `scripts/sync-photos.js` generaba datos mock con URLs de Unsplash, y la home/paginas de fotos podian renderizar esas imagenes como si fueran contenido real.
+- Solucion aplicada: el fallback de sincronizacion ahora escribe dias vacios en `src/data/photos.json`; la home y las paginas `/fotos/[dia]` filtran URLs de Unsplash y muestran un mensaje cuando no hay imagenes reales.
+- Se agrego estado vacio en `GalleryGrid` y en el collage de la home con el mensaje `No hay imágenes disponibles por el momento.`
+- Verificacion: `npm run build` compila correctamente. Durante el build, R2 no resolvio DNS y se genero una galeria vacia.
+
 ## 2026-07-24 - Ajuste Fondo Modal Croquis
 
 - Se corrigio el fondo del croquis al abrirlo en el modal ampliado.
