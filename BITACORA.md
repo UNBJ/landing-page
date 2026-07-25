@@ -1,5 +1,12 @@
 # Bitacora del Proyecto
 
+## 2026-07-24 - Ajuste Fondo Modal Croquis
+
+- Se corrigio el fondo del croquis al abrirlo en el modal ampliado.
+- Causa del problema: `public/croquis-campus.png` conserva transparencia para verse bien sobre el fondo crema de la pagina, pero en el modal esa transparencia dejaba ver el overlay oscuro.
+- Solucion aplicada: se agrego fondo crema, borde sutil y radio leve a `.croquis-lightbox__viewport` para que el PNG transparente tenga una superficie clara propia al ampliarse.
+- Verificacion: `npm run build` compila correctamente. Durante el build, R2 no resolvio DNS y se uso fallback de fotos.
+
 ## 2026-07-23 - Seccion Grupos Devocionales
 
 - Se implemento la nueva seccion `Grupos Devocionales` en `src/pages/index.astro`, tomando como base los frames seleccionados en Pencil.

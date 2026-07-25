@@ -3,11 +3,19 @@ import photosData from '../../data/photos.json';
 import { GalleryGrid } from '../../components/GalleryGrid';
 
 export function getStaticPaths() {
+  const isRealStaticPhoto = (photo) => photo?.url && !photo.url.includes('images.unsplash.com');
+  const galleryPhotos = {
+    lunes: photosData.lunes.filter(isRealStaticPhoto),
+    martes: photosData.martes.filter(isRealStaticPhoto),
+    miercoles: photosData.miercoles.filter(isRealStaticPhoto),
+    jueves: photosData.jueves.filter(isRealStaticPhoto),
+  };
+
   return [
-    { params: { dia: 'lunes' }, props: { title: 'Lunes', date: '22 de Junio', photos: photosData.lunes } },
-    { params: { dia: 'martes' }, props: { title: 'Martes', date: '23 de Junio', photos: photosData.martes } },
-    { params: { dia: 'miercoles' }, props: { title: 'Miércoles', date: '24 de Junio', photos: photosData.miercoles } },
-    { params: { dia: 'jueves' }, props: { title: 'Jueves', date: '25 de Junio', photos: photosData.jueves } },
+    { params: { dia: 'lunes' }, props: { title: 'Lunes', date: '22 de Junio', photos: galleryPhotos.lunes } },
+    { params: { dia: 'martes' }, props: { title: 'Martes', date: '23 de Junio', photos: galleryPhotos.martes } },
+    { params: { dia: 'miercoles' }, props: { title: 'Miércoles', date: '24 de Junio', photos: galleryPhotos.miercoles } },
+    { params: { dia: 'jueves' }, props: { title: 'Jueves', date: '25 de Junio', photos: galleryPhotos.jueves } },
   ];
 }
 

@@ -10,6 +10,19 @@ const diasCalendario = [
   { slug: 'jueves', nombre: 'Jueves', label: 'JUEVES', num: '04' },
 ] as const;
 
+const isRealPhoto = (photo) => photo?.url && !photo.url.includes('images.unsplash.com');
+const galleryPhotos = {
+  lunes: photosData.lunes.filter(isRealPhoto),
+  martes: photosData.martes.filter(isRealPhoto),
+  miercoles: photosData.miercoles.filter(isRealPhoto),
+  jueves: photosData.jueves.filter(isRealPhoto),
+};
+
+const diasGaleria = diasCalendario.map((dia) => ({
+  ...dia,
+  fotos: galleryPhotos[dia.slug],
+}));
+
 const conteoActividades = (n: number) =>
   n === 0 ? 'PRÓXIMAMENTE' : n === 1 ? '1 ACTIVIDAD' : `${n} ACTIVIDADES`;
 
@@ -1185,6 +1198,10 @@ const rangoMinutos = (horario: string) => {
         display: grid;
       }
 
+      .collage-pane--empty.active {
+        display: flex;
+      }
+
       @keyframes fadeInCollage {
         from { opacity: 0; transform: translateY(10px); }
         to { opacity: 1; transform: translateY(0); }
@@ -1219,6 +1236,29 @@ const rangoMinutos = (horario: string) => {
 
       .collage-img-wrapper:hover .collage-img {
         transform: scale(1.03);
+      }
+
+      .galeria-empty {
+        min-height: 420px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        border-top: 1px solid rgba(28, 28, 28, 0.15);
+        border-bottom: 1px solid rgba(28, 28, 28, 0.15);
+        color: var(--text-secondary);
+        text-align: center;
+      }
+
+      .galeria-empty__icon {
+        color: var(--accent-red);
+      }
+
+      .galeria-empty__text {
+        font-size: 14px;
+        font-weight: 500;
       }
 
       /* Alturas de las imágenes para el collage asimétrico */
@@ -1284,6 +1324,9 @@ const rangoMinutos = (horario: string) => {
         .collage-pane.active {
           grid-template-columns: 1fr 1fr;
         }
+        .collage-pane--empty.active {
+          display: flex;
+        }
         .collage-col--side-right {
           display: none; /* Ocultar la tercera columna en tablet */
         }
@@ -1319,6 +1362,12 @@ const rangoMinutos = (horario: string) => {
         .collage-pane.active {
           grid-template-columns: 1fr;
           gap: 16px;
+        }
+        .collage-pane--empty.active {
+          display: flex;
+        }
+        .galeria-empty {
+          min-height: 300px;
         }
         .collage-col--side-left {
           display: none; /* Ocultar primera columna en móvil */
@@ -1588,105 +1637,54 @@ const rangoMinutos = (horario: string) => {
 
         <!-- Contenedor de Collages -->
         <div class="collages-container">
-          {/* Lunes */}
-          <div class="collage-pane active" id="pane-lunes">
-            <div class="collage-col collage-col--side-left">
-              <div class="collage-img-wrapper h-vertical-top">
-                <img src={photosData.lunes[0]?.url} alt="Foto Lunes 1" class="collage-img" loading="lazy" />
+          {diasGaleria.map((dia, index) => (
+            dia.fotos.length === 0 ? (
+              <div class={`collage-pane collage-pane--empty${index === 0 ? ' active' : ''}`} id={`pane-${dia.slug}`}>
+                <div class="galeria-empty" role="status">
+                  <svg class="galeria-empty__icon" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                    <path d="M21 15l-5-5L5 21"></path>
+                  </svg>
+                  <p class="galeria-empty__text">No hay imágenes disponibles por el momento.</p>
+                </div>
               </div>
-              <div class="collage-img-wrapper h-landscape-bottom">
-                <img src={photosData.lunes[3]?.url} alt="Foto Lunes 4" class="collage-img" loading="lazy" />
+            ) : (
+              <div class={`collage-pane${index === 0 ? ' active' : ''}`} id={`pane-${dia.slug}`}>
+                <div class="collage-col collage-col--side-left">
+                  {dia.fotos[0] && (
+                    <div class="collage-img-wrapper h-vertical-top">
+                      <img src={dia.fotos[0].url} alt={`Foto ${dia.nombre} 1`} class="collage-img" loading="lazy" />
+                    </div>
+                  )}
+                  {dia.fotos[3] && (
+                    <div class="collage-img-wrapper h-landscape-bottom">
+                      <img src={dia.fotos[3].url} alt={`Foto ${dia.nombre} 4`} class="collage-img" loading="lazy" />
+                    </div>
+                  )}
+                </div>
+                <div class="collage-col collage-col--hero">
+                  {dia.fotos[1] && (
+                    <div class="collage-img-wrapper h-hero">
+                      <img src={dia.fotos[1].url} alt={`Foto ${dia.nombre} 2`} class="collage-img" loading="lazy" />
+                    </div>
+                  )}
+                </div>
+                <div class="collage-col collage-col--side-right">
+                  {dia.fotos[2] && (
+                    <div class="collage-img-wrapper h-landscape-top">
+                      <img src={dia.fotos[2].url} alt={`Foto ${dia.nombre} 3`} class="collage-img" loading="lazy" />
+                    </div>
+                  )}
+                  {dia.fotos[4] && (
+                    <div class="collage-img-wrapper h-vertical-bottom">
+                      <img src={dia.fotos[4].url} alt={`Foto ${dia.nombre} 5`} class="collage-img" loading="lazy" />
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
-            <div class="collage-col collage-col--hero">
-              <div class="collage-img-wrapper h-hero">
-                <img src={photosData.lunes[1]?.url} alt="Foto Lunes 2 (Hero)" class="collage-img" loading="lazy" />
-              </div>
-            </div>
-            <div class="collage-col collage-col--side-right">
-              <div class="collage-img-wrapper h-landscape-top">
-                <img src={photosData.lunes[2]?.url} alt="Foto Lunes 3" class="collage-img" loading="lazy" />
-              </div>
-              <div class="collage-img-wrapper h-vertical-bottom">
-                <img src={photosData.lunes[4]?.url} alt="Foto Lunes 5" class="collage-img" loading="lazy" />
-              </div>
-            </div>
-          </div>
-
-          {/* Martes */}
-          <div class="collage-pane" id="pane-martes">
-            <div class="collage-col collage-col--side-left">
-              <div class="collage-img-wrapper h-vertical-top">
-                <img src={photosData.martes[0]?.url} alt="Foto Martes 1" class="collage-img" loading="lazy" />
-              </div>
-              <div class="collage-img-wrapper h-landscape-bottom">
-                <img src={photosData.martes[3]?.url} alt="Foto Martes 4" class="collage-img" loading="lazy" />
-              </div>
-            </div>
-            <div class="collage-col collage-col--hero">
-              <div class="collage-img-wrapper h-hero">
-                <img src={photosData.martes[1]?.url} alt="Foto Martes 2 (Hero)" class="collage-img" loading="lazy" />
-              </div>
-            </div>
-            <div class="collage-col collage-col--side-right">
-              <div class="collage-img-wrapper h-landscape-top">
-                <img src={photosData.martes[2]?.url} alt="Foto Martes 3" class="collage-img" loading="lazy" />
-              </div>
-              <div class="collage-img-wrapper h-vertical-bottom">
-                <img src={photosData.martes[4]?.url} alt="Foto Martes 5" class="collage-img" loading="lazy" />
-              </div>
-            </div>
-          </div>
-
-          {/* Miércoles */}
-          <div class="collage-pane" id="pane-miercoles">
-            <div class="collage-col collage-col--side-left">
-              <div class="collage-img-wrapper h-vertical-top">
-                <img src={photosData.miercoles[0]?.url} alt="Foto Miércoles 1" class="collage-img" loading="lazy" />
-              </div>
-              <div class="collage-img-wrapper h-landscape-bottom">
-                <img src={photosData.miercoles[3]?.url} alt="Foto Miércoles 4" class="collage-img" loading="lazy" />
-              </div>
-            </div>
-            <div class="collage-col collage-col--hero">
-              <div class="collage-img-wrapper h-hero">
-                <img src={photosData.miercoles[1]?.url} alt="Foto Miércoles 2 (Hero)" class="collage-img" loading="lazy" />
-              </div>
-            </div>
-            <div class="collage-col collage-col--side-right">
-              <div class="collage-img-wrapper h-landscape-top">
-                <img src={photosData.miercoles[2]?.url} alt="Foto Miércoles 3" class="collage-img" loading="lazy" />
-              </div>
-              <div class="collage-img-wrapper h-vertical-bottom">
-                <img src={photosData.miercoles[4]?.url} alt="Foto Miércoles 5" class="collage-img" loading="lazy" />
-              </div>
-            </div>
-          </div>
-
-          {/* Jueves */}
-          <div class="collage-pane" id="pane-jueves">
-            <div class="collage-col collage-col--side-left">
-              <div class="collage-img-wrapper h-vertical-top">
-                <img src={photosData.jueves[0]?.url} alt="Foto Jueves 1" class="collage-img" loading="lazy" />
-              </div>
-              <div class="collage-img-wrapper h-landscape-bottom">
-                <img src={photosData.jueves[3]?.url} alt="Foto Jueves 4" class="collage-img" loading="lazy" />
-              </div>
-            </div>
-            <div class="collage-col collage-col--hero">
-              <div class="collage-img-wrapper h-hero">
-                <img src={photosData.jueves[1]?.url} alt="Foto Jueves 2 (Hero)" class="collage-img" loading="lazy" />
-              </div>
-            </div>
-            <div class="collage-col collage-col--side-right">
-              <div class="collage-img-wrapper h-landscape-top">
-                <img src={photosData.jueves[2]?.url} alt="Foto Jueves 3" class="collage-img" loading="lazy" />
-              </div>
-              <div class="collage-img-wrapper h-vertical-bottom">
-                <img src={photosData.jueves[4]?.url} alt="Foto Jueves 5" class="collage-img" loading="lazy" />
-              </div>
-            </div>
-          </div>
+            )
+          ))}
         </div>
 
         <!-- CTA dinámico -->
@@ -1698,17 +1696,17 @@ const rangoMinutos = (horario: string) => {
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </a>
-          <span class="cta-counter" id="gallery-cta-counter">+{photosData.lunes.length} fotos</span>
+          <span class="cta-counter" id="gallery-cta-counter">+{galleryPhotos.lunes.length} fotos</span>
         </div>
       </section>
     </main>
 
     <!-- Client-side script to handle tab switching -->
     <script is:inline define:vars={{ photosCount: {
-      lunes: photosData.lunes.length,
-      martes: photosData.martes.length,
-      miercoles: photosData.miercoles.length,
-      jueves: photosData.jueves.length
+      lunes: galleryPhotos.lunes.length,
+      martes: galleryPhotos.martes.length,
+      miercoles: galleryPhotos.miercoles.length,
+      jueves: galleryPhotos.jueves.length
     }}}>
       document.addEventListener('DOMContentLoaded', () => {
         const tabBtns = document.querySelectorAll('.tab-btn');

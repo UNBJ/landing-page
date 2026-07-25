@@ -79,6 +79,56 @@ export const GalleryGrid: React.FC<GalleryGridProps> = ({ photos }) => {
     }
   };
 
+  if (photos.length === 0) {
+    return (
+      <div className="gallery-container">
+        <div className="gallery-empty" role="status">
+          <svg className="gallery-empty-icon" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <path d="M21 15l-5-5L5 21"></path>
+          </svg>
+          <p>No hay imágenes disponibles por el momento.</p>
+        </div>
+
+        <style>{`
+          .gallery-container {
+            width: 100%;
+          }
+
+          .gallery-empty {
+            min-height: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            border-top: 1px solid rgba(28, 28, 28, 0.15);
+            border-bottom: 1px solid rgba(28, 28, 28, 0.15);
+            color: #5E5954;
+            text-align: center;
+          }
+
+          .gallery-empty-icon {
+            color: #D85446;
+          }
+
+          .gallery-empty p {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+          }
+
+          @media (max-width: 639px) {
+            .gallery-empty {
+              min-height: 220px;
+            }
+          }
+        `}</style>
+      </div>
+    );
+  }
+
   return (
     <div className="gallery-container">
       <div
