@@ -1,5 +1,14 @@
 # Bitacora del Proyecto
 
+## 2026-07-26 - Seccion Instagram
+
+- Se implemento la nueva seccion `Instagram` en `src/pages/index.astro`, basada en los frames seleccionados en Pencil para desktop, tablet y mobile.
+- Se inserto directamente antes de la seccion `Calendario de Actividades`, sin agregarla al menu de navegacion.
+- Se agrego `id="instagram"`, handle `@conajeba2026` y CTA externo a `https://www.instagram.com/conajeba2026/` con apertura en pestana nueva.
+- Se replico la direccion visual del diseno: fondo crema, caption rojo, titulo serif, divisor, bloque de handle con icono y boton delineado.
+- Se usaron los breakpoints actuales del proyecto (`1024px` y `640px`) y se agrego el copy mobile especifico del diseno.
+- Verificacion: `npm run build` compila correctamente. Durante el build, R2 no resolvio DNS y se uso fallback de fotos.
+
 ## 2026-07-25 - Galeria sin Placeholders
 
 - Se eliminaron las fotos placeholder de Unsplash cuando Cloudflare R2 no tiene imagenes disponibles o falla la sincronizacion.
