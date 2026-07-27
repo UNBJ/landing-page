@@ -231,6 +231,225 @@ const rangoMinutos = (horario: string) => {
         .hero__decor--arc { display: none; }
       }
 
+      /* ── Instagram Sección ─────────────────────── */
+      .instagram {
+        background: var(--bg-cream);
+        padding: 72px 120px;
+      }
+
+      .instagram__inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 64px;
+      }
+
+      .instagram__text {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 420px;
+      }
+
+      .instagram__caption {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        color: var(--accent-red);
+      }
+
+      .instagram__title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 1.1;
+        color: var(--text-dark);
+      }
+
+      .instagram__description {
+        font-size: 15px;
+        line-height: 1.55;
+        color: var(--text-secondary);
+      }
+
+      .instagram__description--mobile {
+        display: none;
+      }
+
+      .instagram__divider {
+        width: 1px;
+        height: 160px;
+        background: rgba(28, 28, 28, 0.10);
+        flex: 0 0 auto;
+      }
+
+      .instagram__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .instagram__handle {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: var(--text-dark);
+      }
+
+      .instagram__icon {
+        width: 34px;
+        height: 34px;
+        flex: 0 0 auto;
+      }
+
+      .instagram__username {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--text-dark);
+      }
+
+      .instagram__cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 14px 32px;
+        border: 1.5px solid var(--text-dark);
+        border-radius: 4px;
+        color: var(--text-dark);
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: background 0.25s ease, color 0.25s ease;
+      }
+
+      .instagram__cta svg {
+        width: 14px;
+        height: 14px;
+        flex: 0 0 auto;
+      }
+
+      .instagram__cta:hover {
+        background: var(--text-dark);
+        color: var(--bg-cream);
+      }
+
+      /* ── Tablet Instagram ──────────────────────── */
+      @media (max-width: 1024px) {
+        .instagram {
+          padding: 72px 64px;
+        }
+
+        .instagram__inner {
+          flex-direction: column;
+          gap: 32px;
+          text-align: center;
+        }
+
+        .instagram__text {
+          width: 500px;
+          max-width: 100%;
+          align-items: center;
+        }
+
+        .instagram__title {
+          font-size: 38px;
+          line-height: 1.12;
+        }
+
+        .instagram__description {
+          font-size: 14px;
+        }
+
+        .instagram__divider {
+          width: 40px;
+          height: 1px;
+        }
+
+        .instagram__handle {
+          gap: 12px;
+        }
+
+        .instagram__icon {
+          width: 30px;
+          height: 30px;
+        }
+
+        .instagram__username {
+          font-size: 28px;
+        }
+      }
+
+      /* ── Mobile Instagram ──────────────────────── */
+      @media (max-width: 640px) {
+        .instagram {
+          padding: 56px 24px;
+        }
+
+        .instagram__inner {
+          gap: 24px;
+        }
+
+        .instagram__text {
+          width: 100%;
+          gap: 14px;
+        }
+
+        .instagram__caption {
+          font-size: 11px;
+        }
+
+        .instagram__title {
+          font-size: 28px;
+          line-height: 1.15;
+        }
+
+        .instagram__description {
+          font-size: 13px;
+          line-height: 1.5;
+        }
+
+        .instagram__description--desktop {
+          display: none;
+        }
+
+        .instagram__description--mobile {
+          display: block;
+        }
+
+        .instagram__divider {
+          width: 32px;
+        }
+
+        .instagram__handle {
+          gap: 10px;
+        }
+
+        .instagram__icon {
+          width: 24px;
+          height: 24px;
+        }
+
+        .instagram__username {
+          font-size: 22px;
+        }
+
+        .instagram__cta {
+          padding: 12px 28px;
+          font-size: 12px;
+        }
+
+        .instagram__cta svg {
+          width: 13px;
+          height: 13px;
+        }
+      }
+
       /* ── Calendario Sección ────────────────────── */
       .calendario {
         background: var(--bg-cream);
@@ -1448,6 +1667,43 @@ const rangoMinutos = (horario: string) => {
           <div class="accent-line"></div>
         </div>
 
+      </section>
+
+      <!-- ── Sección Instagram ── -->
+      <section class="instagram" id="instagram" aria-labelledby="instagram-title">
+        <div class="instagram__inner">
+          <div class="instagram__text">
+            <span class="instagram__caption">SÍGUENOS</span>
+            <h2 class="instagram__title" id="instagram-title">Mantente al día con CONAJEBA 2026</h2>
+            <p class="instagram__description instagram__description--desktop">
+              Sigue nuestra cuenta oficial de Instagram para conocer las últimas novedades, anuncios y contenido exclusivo del congreso.
+            </p>
+            <p class="instagram__description instagram__description--mobile">
+              Sigue nuestra cuenta oficial de Instagram para las últimas novedades y contenido exclusivo.
+            </p>
+          </div>
+
+          <div class="instagram__divider" aria-hidden="true"></div>
+
+          <div class="instagram__block">
+            <div class="instagram__handle">
+              <svg class="instagram__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+              <span class="instagram__username">@conajeba2026</span>
+            </div>
+
+            <a class="instagram__cta" href="https://www.instagram.com/conajeba2026/" target="_blank" rel="noopener noreferrer" aria-label="Seguir a CONAJEBA 2026 en Instagram">
+              <span>Seguir en Instagram</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M7 17L17 7"></path>
+                <path d="M7 7h10v10"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
       </section>
 
       <!-- ── Sección Calendario ── -->
