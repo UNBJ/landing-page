@@ -1,5 +1,29 @@
 # Bitacora del Proyecto
 
+## 2026-07-26 - Actualizacion Final Links Devocionales
+
+- Se actualizaron nuevamente los enlaces de `src/data/devotional-groups.json` usando `final.xlsx` como fuente definitiva.
+- `final.xlsx` contiene 41 registros completos, correspondientes a los grupos `0` a `40`, sin URLs vacias.
+- Cambios efectivos respecto al estado anterior: se reemplazaron los links de los grupos `5`, `6` y `13`.
+- Se valido que el JSON mantiene 41 grupos, que el primer grupo es `0`, el ultimo es `40` y que no hay URLs vacias.
+- Verificacion: `npm run build` compila correctamente. Durante el build, R2 no resolvio DNS y se uso fallback de fotos.
+
+## 2026-07-26 - Revision Links Devocionales
+
+- Se reviso `grupos-actualizados.xlsx` contra `src/data/devotional-groups.json`; no habia cambios reales despues de normalizar espacios y caracteres invisibles.
+- Se reviso `links-updated.xlsx`, que tenia estructura distinta: grupos en columna B y links en columna C, sin encabezado.
+- Se actualizaron los links disponibles desde `links-updated.xlsx` y se conservaron temporalmente los enlaces anteriores para los grupos `5`, `6` y `13`, porque ese archivo venia con esas URLs vacias.
+- Posteriormente `final.xlsx` reemplazo esta fuente temporal con las URLs completas.
+- Verificacion: `npm run build` compila correctamente. Durante el build, R2 no resolvio DNS y se uso fallback de fotos.
+
+## 2026-07-26 - Nota Deploy Hostinger
+
+- Se detecto en produccion un render sin estilos despues de subir el build a Hostinger.
+- Causa probable: se subio `index.html` sin la carpeta generada `_astro`, o la carpeta quedo en una ruta incorrecta.
+- El build de Astro referencia CSS con ruta absoluta, por ejemplo `/_astro/index.kO0twfcx.css`; por eso `public_html/_astro/` debe existir junto a `public_html/index.html`.
+- Proceso correcto: subir el contenido completo de `dist/` a `public_html/`, incluyendo `_astro/`, `fotos/`, `index.html`, favicons y assets como `croquis-campus.png`.
+- Verificacion manual sugerida: abrir `https://unbj.cnbm.mx/_astro/index.kO0twfcx.css`; si da 404, falta subir `_astro` o quedo dentro de otra carpeta.
+
 ## 2026-07-26 - Seccion Instagram
 
 - Se implemento la nueva seccion `Instagram` en `src/pages/index.astro`, basada en los frames seleccionados en Pencil para desktop, tablet y mobile.
