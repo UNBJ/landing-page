@@ -1,5 +1,13 @@
 # Bitacora del Proyecto
 
+## 2026-07-28 - Actualizacion Croquis Campus
+
+- Se reemplazo la imagen usada en la seccion `Croquis del Campus` por el nuevo archivo adjunto del croquis.
+- Se agrego el asset publico `public/croquis-campus.jpeg`, conservando la imagen original recibida en formato JPEG de `880x1280`.
+- Se actualizaron las referencias en `src/pages/index.astro` para usar `/croquis-campus.jpeg` en la vista normal, el modal ampliado y el enlace de descarga.
+- Se verifico que `dist/croquis-campus.jpeg` se genera en el build y que coincide byte a byte con la imagen adjunta original.
+- Verificacion: `npm run build` compila correctamente. Durante el build, R2 no resolvio DNS y se uso fallback de fotos.
+
 ## 2026-07-26 - Actualizacion Final Links Devocionales
 
 - Se actualizaron nuevamente los enlaces de `src/data/devotional-groups.json` usando `final.xlsx` como fuente definitiva.
